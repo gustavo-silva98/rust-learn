@@ -1,3 +1,5 @@
+use std::io;
+
 fn shadowing() {
     let x = 5;
     
@@ -63,6 +65,9 @@ fn main() {
     println!("Função de Tuplas");
     tuple_descr();
     list_descr();
+    println!("----------------------------------");
+    println!("Função de Input Index");
+    input_index_list()
 }
 
 fn list_descr() {
@@ -75,4 +80,25 @@ fn list_descr() {
     println!("Primeiro elemento da lista é : {list_1}");
     println!("Segundo elemento da lista é : {list_2}");
     println!("Terceiro elemento da lista é : {list_3}");
+}
+
+fn input_index_list() {
+    let a = [1,2,3,4,5];
+
+    println!("Insira um index de array");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+    
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered is not a number");
+
+    let element = a[index];
+
+    println!("O valor do elemento no índice {index} é: {element}");
 }
