@@ -31,6 +31,23 @@ fn math_operations() {
     println!("Remainder é {remainder}");
 }
 
+fn tuple_descr() {
+    let tup: (i32, f64, u8) = (500,10.2, 1);
+    
+    let (x, y, z) = tup;
+    
+    println!("O valor da tupla é {x},{y},{z}");
+
+    let primeiro = tup.0;
+    let segundo = tup.1;
+    let terceiro = tup.2;
+    println!("O valor primeiro da tupla é {primeiro}");
+    println!("O valor segundo da tupla é {segundo}");
+    println!("O valor terceiro da tupla é {terceiro}");
+
+}
+
+
 fn main() {
     let mut x = 5;
     println!("O valor de x é: {x}");
@@ -42,5 +59,20 @@ fn main() {
     println!("----------------------------------");
     println!("Função de Operações matemáticas");
     math_operations();
+    println!("----------------------------------");
+    println!("Função de Tuplas");
+    tuple_descr();
+    list_descr();
+}
 
+fn list_descr() {
+    let list:[i32;3] = [1,2,3]; 
+
+    let list_1 = list[0];
+    let list_2 = list[1];
+    let list_3 = list[2];
+
+    println!("Primeiro elemento da lista é : {list_1}");
+    println!("Segundo elemento da lista é : {list_2}");
+    println!("Terceiro elemento da lista é : {list_3}");
 }
