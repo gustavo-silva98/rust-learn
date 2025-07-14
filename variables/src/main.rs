@@ -1,6 +1,9 @@
 use std::io;
 
 fn shadowing() {
+    // A função mostra o shadowing, onde a variavel ""muta""
+    // dentro do scope dentro dos curly brackets. 
+    // Usar o let deixa mutar o valor e tbm muda o contexto com brackets
     let x = 5;
     
     let x = x + 1;
