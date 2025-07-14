@@ -7,7 +7,9 @@ fn main() {
     } 
     else {
         println!("O número {numero_teste} NÃO é par")
-    }  
+    }
+    
+    counter_until_x(10)    
 }
 
 // Função com bloco if para teste de control flow
@@ -18,4 +20,18 @@ fn is_even(number : i32) -> bool {
     else {
         false
     }
+}
+
+fn counter_until_x(x:i32) {
+    let mut count = 0;
+
+    let result = loop{
+        count +=1;
+
+        if count == x {
+            break count;
+        }
+    };
+
+    println!("O resultado é {result}")
 }
